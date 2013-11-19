@@ -13,9 +13,11 @@ alias chromedev='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome 
 #alias screen='screen -T xterm-256color'
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-source ~/.zer0prompt
-zer0prompt
-unset zer0prompt
+#export PS1='\u@\h\w ▸ '
+export PS1="\[\e[00;37m\]\u@\h\[\e[0m\]\[\e[00;31m\]\w\[\e[0m\]\[\e[00;37m\]\[\e[0m\]\[\e[00;33m\] ▸ \[\e[0m\]\[\e[00;37m\]\[\e[0m\]"
+#source ~/.zer0prompt
+#zer0prompt
+#unset zer0prompt
 
 # Toggle showing hidden files -------------------------------------------------
 function showHidden 
