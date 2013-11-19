@@ -40,8 +40,8 @@ inoremap jj <Esc>
 "set foldmethod=syntax
 "set foldlevelstart=1
 "let javaScript_fold=1
-set foldmethod=indent
-set foldnestmax=10
+set foldmethod=manual
+set foldnestmax=100
 set nofoldenable "Don't fold by default
 set foldlevel=1
 
