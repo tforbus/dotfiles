@@ -43,6 +43,9 @@ inoremap } ]
 " Can't remap esc to capslock in os x w/o a plugin.
 inoremap jj <Esc>
 
+" Remapped ; so get that functionality back.
+nnoremap ;; ;
+
 " Code folding ------------------------------------------------------------
 " Folding has 6 options: manual/indent/expr/syntax/diff/marker
 "set foldmethod=syntax
