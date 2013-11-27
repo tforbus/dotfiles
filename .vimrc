@@ -31,6 +31,14 @@ set laststatus=2
 
 " Lazy as hell.
 nnoremap ; :
+inoremap 9 (
+inoremap 0 )
+inoremap ( 9
+inoremap ) 0
+inoremap [ {
+inoremap ] }
+inoremap { [
+inoremap } ]
 
 " Can't remap esc to capslock in os x w/o a plugin.
 inoremap jj <Esc>
@@ -120,6 +128,7 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
 
 " Mouse!
 map <ScrollWheelUp> <C-Y>

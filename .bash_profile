@@ -1,11 +1,12 @@
 #!/bin/bash
+#source ~/dotfiles/.git_status
 
 alias sv='supervisor'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias la='ls -aGFh'
 alias gpom='git push origin master'
-alias gc='git add . && git commit -am'
+alias gc='git add --all . && git commit -am'
 alias express='express --ejs --css less'
 alias ls='ls -GFh'
 alias rpirc='irssi -c -SSL rpirc.piratejon.com -p 9999 -n tdogg69'
@@ -14,7 +15,7 @@ alias chromedev='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 #export PS1='\u@\h\w ▸ '
-export PS1="\[\e[00;37m\]\u@\h\[\e[0m\]\[\e[00;31m\]\w\[\e[0m\]\[\e[00;37m\]\[\e[0m\]\[\e[00;33m\] ▸ \[\e[0m\]\[\e[00;37m\]\[\e[0m\]"
+export PS1="\[\e[00;37m\]\u\[\e[0m\]\[\e[00;31m\]\w\[\e[0m\]\[\e[00;37m\]\[\e[0m\]\[\e[00;33m\] ▸ \[\e[0m\]\[\e[00;37m\]\[\e[0m\]"
 #source ~/.zer0prompt
 #zer0prompt
 #unset zer0prompt
