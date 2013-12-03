@@ -2,6 +2,8 @@
 #source ~/dotfiles/.git_status
 
 alias sv='supervisor'
+# get rid of all the vim swp files
+alias noswap='rm $(find . -type f -name ".*\.sw[a-z]")'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias la='ls -aGFh'

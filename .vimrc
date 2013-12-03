@@ -80,7 +80,12 @@ set showmatch
 set mat=2
 
 " Show line numbers
-set number
+" set number
+
+" relative numbers in normal mode, absolute in insert.
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+set relativenumber
 
 " Column at 80
 set colorcolumn=80
@@ -94,7 +99,8 @@ syntax enable
 " Theme
 set background=dark
 "colorscheme molokai
-colorscheme zenburn
+colorscheme solarized
+"colorscheme zenburn
 set guifont=Menlo\ Regular:h14
 
 " Text, tabs, etc. --------------------------------------------------------
