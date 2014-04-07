@@ -8,14 +8,19 @@ set t_Co=256
 filetype plugin on
 filetype indent on
 
+" Tree view for e.
+let g:netrw_liststyle=3 "tree mode
+"let g:netrw_browse_split=4 "open file in previous buffer
+"let g:netrw_preview=1 " preview window in vertical split
+
 " No need to put ! to overwrite the save
 nmap <leader>w :w!<cr>
 
-" JSHint!
-let g:syntastic_javascript_checkers=['jshint']
 
-" No HTML validation because it's annoying
-let g:syntastic_mode_map={'mode': 'active', 'passive_filetypes': ['html']}
+" JSHint (npm install -g jshint)
+let jshint2_read = 1
+let jshint2_save = 1
+let jshint2_confirm = 0
 
 " Treat *.ejs as *.html
 au BufNewFile,BufRead *.ejs set filetype=html
@@ -24,21 +29,13 @@ au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.less set filetype=css
 
 " Omnicompletion (auto complete)
-set omnifunc=syntaxcomplete#Complete
+"set omnifunc=syntaxcomplete#Complete
 
 " vim-airline wasn't appearing until a split, so this fixes that.
 set laststatus=2
 
 " Lazy as hell.
 nnoremap ; :
-inoremap 9 (
-inoremap 0 )
-inoremap ( 9
-inoremap ) 0
-inoremap [ {
-inoremap ] }
-inoremap { [
-inoremap } ]
 
 " Can't remap esc to capslock in os x w/o a plugin.
 inoremap jj <Esc>
@@ -50,9 +47,10 @@ nnoremap ;; ;
 " Folding has 6 options: manual/indent/expr/syntax/diff/marker
 "set foldmethod=syntax
 "set foldlevelstart=1
-"let javaScript_fold=1
-set foldmethod=manual
-set foldnestmax=100
+let javaScript_fold=1
+set foldmethod=syntax
+set foldnestmax=1
+set foldlevelstart=1
 set nofoldenable "Don't fold by default
 set foldlevel=1
 
@@ -87,8 +85,10 @@ autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 set relativenumber
 
-" Column at 80
-set colorcolumn=80
+" Column at 95
+" I'm changing from 80 because it seems 95 is still okay for readability.
+" en.wikipedia.org/wiki/Characters_per_line
+set colorcolumn=95
 
 
 " Colors and fonts --------------------------------------------------------
@@ -137,6 +137,10 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" Next and previous buffer switching with tab
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
 
 
 " Mouse!

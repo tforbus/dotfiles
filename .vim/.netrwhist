@@ -1,7 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/tforbus/_jquery/calendarize'
-let g:netrw_dirhist_2='/Users/tforbus/.vim'
-let g:netrw_dirhist_3='/Users/tforbus/_node/drum_machine/public/javascripts'
-let g:netrw_dirhist_4='/Users/tforbus/_node/TheCoordinator/coordinator'
-let g:netrw_dirhist_5='/Users/tforbus/_jquery/data-structures/.git'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/tristin/Code/warehouse-watch-scraper'
+let g:netrw_dirhist_2='/Users/tristin/Code/warehouse-watch-scraper/models'
+let g:netrw_dirhist_3='/Users/tristin/Code/warehouse-watch-scraper/scraper'
